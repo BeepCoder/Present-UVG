@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicidades Lu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Fondo de la página */
+        body {
+            background-image: url('fondo.jpg'); /* Asegúrate de que la imagen esté en la misma carpeta o proporciona la ruta correcta */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Centrar el contenido */
+        .center-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Estilo de la hoja */
+        .paper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -120%);
+            width: 300px;
+            height: 200px;
+            background: white;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none; /* Oculto inicialmente */
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="container center-container">
+        <!-- Hoja que aparece al presionar el botón -->
+        <div class="paper" id="paper">
+            <!-- Puedes agregar contenido a la hoja -->
+            <p class="text-center mt-3">¡MUCHAS FELICIDADES POR COMPLETAR ESTA ETAPA TAN IMPORTANTE PARA TI!!!!!</p>
+            <p class="text-center">Att: Marcos y Fabiola</p>
+            <center>
+                <img src="./Foto.jpeg" height="400" width="300">
+            </center>
+        </div>
+        <!-- Imagen del sobre -->
+        <img src="Sobre1.png" alt="Sobre" class="img-fluid mb-3" style="width: 400px;">
+
+        <img src="./cheems.png" width="150" height="170">
+        <p class="text-center">Ábreme con dos clicks. QUE ME DA ANSIEDAD.</p>
+
+        <!-- Botón Open -->
+        <button class="btn btn-primary" id="openButton">Open</button>
+    </div>
+
+    <script>
+        // JavaScript para mostrar la hoja al hacer clic en el botón
+        document.getElementById('openButton').addEventListener('click', function() {
+            const paper = document.getElementById('paper');
+            if (paper.style.display === 'none') {
+                paper.style.display = 'block'; // Mostrar la hoja
+            } else {
+                paper.style.display = 'none'; // Ocultar la hoja si ya está abierta
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
